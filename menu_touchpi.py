@@ -213,14 +213,14 @@ for row in xrange(0,button_rows):
         from_left = horizontal_spacing + (horizontal_spacing * column) + (button_width * column)
         from_top =  headersize + (vertical_spacing * row) + (button_height * row)
         print ('row: {} column: {} from_left: {} from_top: {}').format(row, column, from_left, from_top)
+        make_button(button_labels[row + column], from_left, from_top, button_height, button_width, blue)
 
-
-#in pixels from left, from top, height, width
-make_button("Desktop", 40, 105, 35, 120, blue)
-make_button("Terminal", 180, 105, 35, 120, blue)
-# Third Row buttons 5 and 6
-make_button("Empty Button", 40, 180, 35, 120, blue)
-make_button("WiFi Settings", 180, 180, 35, 120, blue)
+# #in pixels from left, from top, height, width
+# make_button("Desktop", 40, 105, 35, 120, blue)
+# make_button("Terminal", 180, 105, 35, 120, blue)
+# # Third Row buttons 5 and 6
+# make_button("Empty Button", 40, 180, 35, 120, blue)
+# make_button("WiFi Settings", 180, 180, 35, 120, blue)
 # Fourth Row Buttons
 # make_button("      Reboot", 30, 255, 55, 210, blue)
 # make_button("   Shutdown", 260, 255, 55, 210, blue)
