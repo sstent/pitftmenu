@@ -4,6 +4,7 @@ import time
 import subprocess
 import os
 import RPi.GPIO
+from pprint import pprint
 from subprocess import *
 os.environ["SDL_FBDEV"] = "/dev/fb1"
 os.environ["SDL_MOUSEDEV"] = "/dev/input/touchscreen"
@@ -174,8 +175,9 @@ orange  = (255, 127,   0)
 
 #set size of the screen
 size = width, height = 320, 240
-screen = pygame.display.set_mode(size)
 
+screen = pygame.display.set_mode(size)
+pprint (size)
 # Background Color
 screen.fill(black)
 
@@ -183,6 +185,8 @@ screen.fill(black)
 pygame.draw.rect(screen, blue, (0,0,320,240),10)
 pi_hostname = run_cmd("hostname")
 pi_hostname = pi_hostname[:-1]
+
+
 # Buttons and labels
 # First Row Label
 make_label(pi_hostname + " - " +  get_ip(), 32, 30, 24, blue)
