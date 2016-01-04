@@ -177,7 +177,7 @@ screen_height = 240
 screen_border = 10
 screen_vertical_spacing = 20
 screen_horizontal_spacing = 10
-headersize = 
+headersize = 40
 button_rows = 2
 button_columns = 3
 
