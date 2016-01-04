@@ -210,9 +210,9 @@ for row in xrange(0,button_rows):
         #print ('row: {} column: {}').format(row, column)
         #button = row + column
         if row < 1:
-            button_id = row + column + 1
+            button_id = row + column 
         else:
-            button_id = row + column
+            button_id = row + column + 1
         pprint (button_labels[button_id])
         from_left = horizontal_spacing + (horizontal_spacing * column) + (button_width * column)
         from_top =  headersize + (vertical_spacing * row) + (button_height * row)
