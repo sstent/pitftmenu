@@ -208,17 +208,12 @@ button_iter = 0
 for row in xrange(0,button_rows):
     for column in xrange(0,button_columns):
         #print ('row: {} column: {}').format(row, column)
-        #button = row + column
-        if row < 1:
-            button_id = row + column 
-        else:
-            button_id = row + column + 1
-        pprint (button_id)
-        pprint (button_labels[button_id])
+        pprint (button_labels[button_iter])
         from_left = horizontal_spacing + (horizontal_spacing * column) + (button_width * column)
         from_top =  headersize + (vertical_spacing * row) + (button_height * row)
         print ('row: {} column: {} from_left: {} from_top: {}').format(row, column, from_left, from_top)
         make_button(button_labels[row + column], from_left, from_top, button_height, button_width, blue)
+        button_iter += 1 
 
 # #in pixels from left, from top, height, width
 # make_button("Desktop", 40, 105, 35, 120, blue)
