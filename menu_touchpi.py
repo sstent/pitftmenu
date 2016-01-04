@@ -5,6 +5,9 @@ import subprocess
 import os
 import RPi.GPIO
 from pprint import pprint
+from pandas import *
+
+
 from subprocess import *
 os.environ["SDL_FBDEV"] = "/dev/fb1"
 os.environ["SDL_MOUSEDEV"] = "/dev/input/touchscreen"
@@ -220,6 +223,9 @@ for row in xrange(0,button_rows):
                 screen_click_map[map_row][map_column] = button_iter
                 #pass
         button_iter += 1
+
+
+print DataFrame(screen_click_map)
 
 # #in pixels from left, from top, height, width
 # make_button("Desktop", 40, 105, 35, 120, blue)
