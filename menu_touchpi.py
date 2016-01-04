@@ -181,6 +181,8 @@ headersize = 40
 button_rows = 2
 button_columns = 3
 
+button_labels = ["Desktop","Terminal","Empty","WiFi Settings"]
+
 #set size of the screen
 size = screen_width, screen_height
 screen = pygame.display.set_mode(size)
@@ -199,6 +201,11 @@ pi_hostname = pi_hostname[:-1]
 #make_label(text, xpo, ypo, fontsize, colour):
 make_label(pi_hostname + " - " +  get_ip(), vertical_spacing, horizontal_spacing, 24, blue)
 # Second Row buttons 3 and 4
+button_iter = 0
+for row in button_rows:
+    for column in button_columns:
+        print ('row: {} column: {}').format(row, column)
+
 #in pixels from left, from top, height, width
 make_button("Desktop", 40, 105, 35, 120, blue)
 make_button("Terminal", 180, 105, 35, 120, blue)
