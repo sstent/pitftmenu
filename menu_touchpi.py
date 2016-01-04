@@ -213,7 +213,7 @@ for row in xrange(0,button_rows):
         pprint (button_labels[button_iter])
         from_left = horizontal_spacing + (horizontal_spacing * column) + (button_width * column)
         from_top =  headersize + (vertical_spacing * row) + (button_height * row)
-        print ('row: {} column: {} from_left: {} from_top: {}').format(row, column, from_left, from_top)
+        print ('row: {} column: {} from_left: {} from_top: {} maprows {}-{} mapcols {}-{} ').format(row, column, from_left, from_top, from_top, (from_top + button_height), from_left, (from_left + button_width))
         make_button(button_labels[button_iter], from_left, from_top, button_height, button_width, blue)
         for map_row in xrange(from_top, from_top + button_height):
             for map_column in xrange(from_left, from_left + button_width):
