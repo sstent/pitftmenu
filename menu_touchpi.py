@@ -173,25 +173,25 @@ orange  = (255, 127,   0)
 # Set up the base menu you can customize your menu with the colors above
 
 #set size of the screen
-size = width, height = 480, 320
+size = width, height = 320, 240
 screen = pygame.display.set_mode(size)
 
 # Background Color
 screen.fill(black)
 
 # Outer Border
-pygame.draw.rect(screen, blue, (0,0,480,320),10)
+pygame.draw.rect(screen, blue, (0,0,320,240),10)
 pi_hostname = run_cmd("hostname")
 pi_hostname = pi_hostname[:-1]
 # Buttons and labels
 # First Row Label
 make_label(pi_hostname + " - " +  get_ip(), 32, 30, 48, blue)
 # Second Row buttons 3 and 4
-make_button("     Desktop", 30, 105, 55, 210, blue)
-make_button("    Terminal", 260, 105, 55, 210, blue)
+make_button("     Desktop", 30, 105, 35, 210, blue)
+make_button("    Terminal", 260, 105, 35, 210, blue)
 # Third Row buttons 5 and 6
-make_button(" Empty Button", 30, 180, 55, 210, blue)
-make_button(" WiFi Settings", 260, 180, 55, 210, blue)
+make_button(" Empty Button", 30, 180, 35, 210, blue)
+make_button(" WiFi Settings", 260, 180, 35, 210, blue)
 # Fourth Row Buttons
 make_button("      Reboot", 30, 255, 55, 210, blue)
 make_button("   Shutdown", 260, 255, 55, 210, blue)
