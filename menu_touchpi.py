@@ -5,7 +5,7 @@ import subprocess
 import os
 import RPi.GPIO
 from pprint import pprint
-#from pandas import *
+from pandas import *
 
 
 from subprocess import *
@@ -234,7 +234,7 @@ for row in xrange(0,button_rows):
         button_iter += 1
 
 
-#print DataFrame(screen_click_map)
+print DataFrame(screen_click_map)
 
 # #in pixels from left, from top, height, width
 # make_button("Desktop", 40, 105, 35, 120, blue)
