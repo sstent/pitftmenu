@@ -35,24 +35,30 @@ def on_touch():
     # get the position that was touched
     touch_pos = (pygame.mouse.get_pos() [0], pygame.mouse.get_pos() [1])
     #  x_min                 x_max   y_min                y_max
-    # button 1 event
-    if 30 <= touch_pos[0] <= 240 and 105 <= touch_pos[1] <=160:
-            button(1)
-    # button 2 event
-    if 260 <= touch_pos[0] <= 470 and 105 <= touch_pos[1] <=160:
-            button(2)
-    # button 3 event
-    if 30 <= touch_pos[0] <= 240 and 180 <= touch_pos[1] <=235:
-            button(3)
-    # button 4 event
-    if 260 <= touch_pos[0] <= 470 and 180 <= touch_pos[1] <=235:
-            button(4)
-    # button 5 event
-    if 30 <= touch_pos[0] <= 240 and 255 <= touch_pos[1] <=310:
-            button(5)
-    # button 6 event
-    if 260 <= touch_pos[0] <= 470 and 255 <= touch_pos[1] <=310:
-            button(6)
+    if screen_click_map[touch_pos[0]][touch_pos[1]] = 0:
+        print "Not a button!!"
+    else:
+         button(screen_click_map[touch_pos[0]][touch_pos[1]])
+
+
+    # # button 1 event
+    # if 30 <= touch_pos[0] <= 240 and 105 <= touch_pos[1] <=160:
+    #         button(1)
+    # # button 2 event
+    # if 260 <= touch_pos[0] <= 470 and 105 <= touch_pos[1] <=160:
+    #         button(2)
+    # # button 3 event
+    # if 30 <= touch_pos[0] <= 240 and 180 <= touch_pos[1] <=235:
+    #         button(3)
+    # # button 4 event
+    # if 260 <= touch_pos[0] <= 470 and 180 <= touch_pos[1] <=235:
+    #         button(4)
+    # # button 5 event
+    # if 30 <= touch_pos[0] <= 240 and 255 <= touch_pos[1] <=310:
+    #         button(5)
+    # # button 6 event
+    # if 260 <= touch_pos[0] <= 470 and 255 <= touch_pos[1] <=310:
+    #         button(6)
 
 # Get Your External IP Address
 def get_ip():
