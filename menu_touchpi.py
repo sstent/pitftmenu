@@ -182,7 +182,7 @@ pprint (size[0])
 pprint (size[1])
 
 # Background Color
-screen.fill(black)3
+screen.fill(black)
 
 # Outer Border
 pygame.draw.rect(screen, blue, (0,0,320,240),10)
