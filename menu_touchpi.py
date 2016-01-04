@@ -182,7 +182,7 @@ button_rows = 3
 button_columns = 2
 button_height = 35
 button_width = 140
-screen_click_map = [[element] * screen_width] * screen_height
+screen_click_map = [[0] * screen_width] * screen_height
 pprint(screen_click_map)
 button_labels = ["Desktop","Terminal","Empty","WiFi Settings","blank","blank"]
 
