@@ -182,7 +182,8 @@ button_rows = 3
 button_columns = 2
 button_height = 35
 button_width = 140
-
+screen_click_map = [[x for x in range(screen_width)] for y in range(screen_height)]
+pprint(screen_click_map)
 button_labels = ["Desktop","Terminal","Empty","WiFi Settings","blank","blank"]
 
 #set size of the screen
@@ -205,6 +206,8 @@ make_label(pi_hostname + " - " +  get_ip(), vertical_spacing, horizontal_spacing
 # Second Row buttons 3 and 4
 button_iter = 0
 
+
+
 for row in xrange(0,button_rows):
     for column in xrange(0,button_columns):
         #print ('row: {} column: {}').format(row, column)
@@ -213,7 +216,7 @@ for row in xrange(0,button_rows):
         from_top =  headersize + (vertical_spacing * row) + (button_height * row)
         print ('row: {} column: {} from_left: {} from_top: {}').format(row, column, from_left, from_top)
         make_button(button_labels[button_iter], from_left, from_top, button_height, button_width, blue)
-        button_iter += 1 
+        button_iter += 1
 
 # #in pixels from left, from top, height, width
 # make_button("Desktop", 40, 105, 35, 120, blue)
