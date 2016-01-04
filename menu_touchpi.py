@@ -185,17 +185,17 @@ pi_hostname = run_cmd("hostname")
 pi_hostname = pi_hostname[:-1]
 # Buttons and labels
 # First Row Label
-make_label(pi_hostname + " - " +  get_ip(), 32, 30, 48, blue)
+make_label(pi_hostname + " - " +  get_ip(), 32, 30, 24, blue)
 # Second Row buttons 3 and 4
 #in pixels from left, from top, height, width
 make_button("     Desktop", 40, 105, 35, 120, blue)
 make_button("    Terminal", 180, 105, 35, 120, blue)
 # Third Row buttons 5 and 6
-make_button(" Empty Button", 30, 180, 35, 210, blue)
-make_button(" WiFi Settings", 260, 180, 35, 210, blue)
+make_button(" Empty Button", 40, 180, 35, 120, blue)
+make_button(" WiFi Settings", 180, 180, 35, 120, blue)
 # Fourth Row Buttons
-make_button("      Reboot", 30, 255, 55, 210, blue)
-make_button("   Shutdown", 260, 255, 55, 210, blue)
+# make_button("      Reboot", 30, 255, 55, 210, blue)
+# make_button("   Shutdown", 260, 255, 55, 210, blue)
 
 # LBO Pin from Powerboost
 RPi.GPIO.setmode (RPi.GPIO.BCM)
