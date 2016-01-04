@@ -5,7 +5,7 @@ import subprocess
 import os
 import RPi.GPIO
 from pprint import pprint
-from pandas import *
+import pandas as pd
 
 
 from subprocess import *
@@ -218,6 +218,12 @@ make_label(pi_hostname + " - " +  get_ip(), vertical_spacing, horizontal_spacing
 button_iter = 0
 
 
+pd.set_option('display.height', 1000)
+pd.set_option('display.max_rows', 500)
+pd.set_option('display.max_columns', 500)
+pd.set_option('display.width', 1000)
+
+print pd.DataFrame(screen_click_map)
 
 for row in xrange(0,button_rows):
     for column in xrange(0,button_columns):
@@ -234,7 +240,7 @@ for row in xrange(0,button_rows):
         button_iter += 1
 
 
-print DataFrame(screen_click_map)
+print pd.DataFrame(screen_click_map)
 
 # #in pixels from left, from top, height, width
 # make_button("Desktop", 40, 105, 35, 120, blue)
