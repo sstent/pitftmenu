@@ -191,7 +191,7 @@ screen = pygame.display.set_mode(size)
 screen.fill(black)
 
 # Outer Border
-pygame.draw.rect(screen, blue, (0,0,screen_width,screen_height),screen_border)
+pygame.draw.rect(screen, blue, (0,0,screen_width,screen_height), screen_border_width)
 pi_hostname = run_cmd("hostname")
 pi_hostname = pi_hostname[:-1]
 
