@@ -172,12 +172,13 @@ yellow  = (255, 255,   0)
 orange  = (255, 127,   0)
 
 # Set up the base menu you can customize your menu with the colors above
+screen_width = 320
 
 #set size of the screen
-size = width, height = 320, 240
+size = width, height = screen_width, 240
 
 screen = pygame.display.set_mode(size)
-pprint (size[0])
+screen_width = size[0]
 # Background Color
 screen.fill(black)
 
