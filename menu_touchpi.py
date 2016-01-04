@@ -15,7 +15,7 @@ pygame.mouse.set_visible(0)
 
 # define function for printing text in a specific place with a specific width and height with a specific colour and border
 def make_button(text, xpo, ypo, height, width, colour):
-    font=pygame.font.Font(None,42)
+    font=pygame.font.Font(None,24)
     label=font.render(str(text), 1, (colour))
     screen.blit(label,(xpo,ypo))
     pygame.draw.rect(screen, blue, (xpo-10,ypo-10,width,height),5)
