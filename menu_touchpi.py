@@ -174,17 +174,16 @@ orange  = (255, 127,   0)
 # Set up the base menu you can customize your menu with the colors above
 screen_width = 320
 screen_height = 240
-
-
+screen_border = 10
+screen_vertical_spacing = 20
+screen_horizontal_spacing = 10
+headersize = 
+button_rows = 2
+button_columns = 3
 
 #set size of the screen
-#size = screen_width, screen_height
-
-#screen = pygame.display.set_mode(size)
-screen = pygame.display.set_mode(screen_width, screen_height)
-
-pprint (size[0])
-pprint (size[1])
+size = screen_width, screen_height
+screen = pygame.display.set_mode(size)
 
 # Background Color
 screen.fill(black)
@@ -197,6 +196,7 @@ pi_hostname = pi_hostname[:-1]
 
 # Buttons and labels
 # First Row Label
+#make_label(text, xpo, ypo, fontsize, colour):
 make_label(pi_hostname + " - " +  get_ip(), 32, 30, 24, blue)
 # Second Row buttons 3 and 4
 #in pixels from left, from top, height, width
