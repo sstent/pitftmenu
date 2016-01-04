@@ -39,7 +39,8 @@ def on_touch():
     if map_val == 0:
         print "Not a button!!"
     else:
-         button(map_val)
+        pprint (map_val)
+        #button(map_val)
 
 
     # # button 1 event
