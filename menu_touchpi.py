@@ -175,7 +175,7 @@ orange  = (255, 127,   0)
 screen_width = 320
 screen_height = 240
 #set size of the screen
-size = width, height = screen_width, screen_height
+size = screen_width, screen_height
 
 screen = pygame.display.set_mode(size)
 pprint (size[0])
