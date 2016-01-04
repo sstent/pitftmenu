@@ -217,7 +217,7 @@ for row in xrange(0,button_rows):
         make_button(button_labels[button_iter], from_left, from_top, button_height, button_width, blue)
         for map_row in xrange(from_top, from_top + button_height):
             for map_column in xrange(from_left, from_left + button_width):
-                screen_click_map[map_row][map_column] = button_iter
+                #screen_click_map[map_row][map_column] = button_iter
         button_iter += 1
 
 # #in pixels from left, from top, height, width
