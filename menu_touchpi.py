@@ -177,7 +177,7 @@ orange  = (255, 127,   0)
 size = width, height = 320, 240
 
 screen = pygame.display.set_mode(size)
-pprint (size)
+pprint (size[0])
 # Background Color
 screen.fill(black)
 
