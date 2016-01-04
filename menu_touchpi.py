@@ -178,12 +178,12 @@ screen_border_width = 10
 vertical_spacing = 30
 horizontal_spacing = 20
 headersize = 80
-button_rows = 2
+button_rows = 3
 button_columns = 2
 button_height = 35
 button_width = 140
 
-button_labels = ["Desktop","Terminal","Empty","WiFi Settings"]
+button_labels = ["Desktop","Terminal","Empty","WiFi Settings","blank","blank"]
 
 #set size of the screen
 size = screen_width, screen_height
