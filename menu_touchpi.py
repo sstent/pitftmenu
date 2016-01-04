@@ -212,7 +212,7 @@ for row in xrange(0,button_rows):
         from_left = horizontal_spacing + (horizontal_spacing * column) + (button_width * column)
         from_top =  headersize + (vertical_spacing * row) + (button_height * row)
         print ('row: {} column: {} from_left: {} from_top: {}').format(row, column, from_left, from_top)
-        make_button(button_labels[row + column], from_left, from_top, button_height, button_width, blue)
+        make_button(button_labels[button_iter], from_left, from_top, button_height, button_width, blue)
         button_iter += 1 
 
 # #in pixels from left, from top, height, width
