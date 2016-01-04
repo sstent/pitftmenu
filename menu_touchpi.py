@@ -179,7 +179,7 @@ vertical_spacing = 20
 horizontal_spacing = 10
 headersize = 40
 button_rows = 2
-button_columns = 3
+button_columns = 2
 button_height = 35
 button_width = 120
 
