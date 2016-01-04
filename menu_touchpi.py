@@ -207,7 +207,7 @@ for row in xrange(0,button_rows):
     for column in xrange(0,button_columns):
         print ('row: {} column: {}').format(row, column)
         button = row + column
-        pprint (button)
+        pprint (button_label[button])
 
 #in pixels from left, from top, height, width
 make_button("Desktop", 40, 105, 35, 120, blue)
