@@ -215,9 +215,9 @@ for row in xrange(0,button_rows):
         from_top =  headersize + (vertical_spacing * row) + (button_height * row)
         print ('row: {} column: {} from_left: {} from_top: {}').format(row, column, from_left, from_top)
         make_button(button_labels[button_iter], from_left, from_top, button_height, button_width, blue)
-        for row in xrange(from_top, from_top + button_height):
-            for column in xrange(from_left, from_left + button_width):
-                screen_click_map[row][column] = button_iter
+        for map_row in xrange(from_top, from_top + button_height):
+            for map_column in xrange(from_left, from_left + button_width):
+                screen_click_map[map_row][map_column] = button_iter
         button_iter += 1
 
 # #in pixels from left, from top, height, width
