@@ -180,6 +180,8 @@ horizontal_spacing = 10
 headersize = 40
 button_rows = 2
 button_columns = 3
+button_height = 35
+button_width = 120
 
 button_labels = ["Desktop","Terminal","Empty","WiFi Settings"]
 
@@ -206,8 +208,11 @@ button_iter = 0
 for row in xrange(0,button_rows):
     for column in xrange(0,button_columns):
         print ('row: {} column: {}').format(row, column)
-        button = row + column
-        pprint (button_labels[button])
+        #button = row + column
+        pprint (button_labels[row + column])
+        from_left = horizontal_spacing + (horizontal_spacing * column)
+        from_top =  headersize + horizontal_spacing
+
 
 #in pixels from left, from top, height, width
 make_button("Desktop", 40, 105, 35, 120, blue)
