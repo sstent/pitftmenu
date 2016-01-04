@@ -176,12 +176,12 @@ screen_width = 320
 screen_height = 240
 screen_border_width = 10
 vertical_spacing = 30
-horizontal_spacing =40
+horizontal_spacing = 30
 headersize = 80
 button_rows = 2
 button_columns = 2
 button_height = 35
-button_width = 120
+button_width = 140
 
 button_labels = ["Desktop","Terminal","Empty","WiFi Settings"]
 
