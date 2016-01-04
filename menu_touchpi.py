@@ -210,7 +210,7 @@ for row in xrange(0,button_rows):
         #print ('row: {} column: {}').format(row, column)
         #button = row + column
         pprint (button_labels[row + column])
-        from_left = horizontal_spacing + (horizontal_spacing * column)
+        from_left = horizontal_spacing + (horizontal_spacing * column) + (button_width * column)
         from_top =  headersize + (vertical_spacing * row) + (button_height * row)
         print ('row: {} column: {} from_left: {} from_top: {}').format(row, column, from_left, from_top)
 
