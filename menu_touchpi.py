@@ -203,9 +203,11 @@ make_label(pi_hostname + " - " +  get_ip(), vertical_spacing, horizontal_spacing
 # Second Row buttons 3 and 4
 button_iter = 0
 
-for row in xrange(0,button_rows):
-    for column in xrange(0,button_columns):
+for row in xrange(1,button_rows + 1):
+    for column in xrange(1,button_columns +1):
         print ('row: {} column: {}').format(row, column)
+        button = row + column
+        pprint (button)
 
 #in pixels from left, from top, height, width
 make_button("Desktop", 40, 105, 35, 120, blue)
