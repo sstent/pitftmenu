@@ -188,8 +188,8 @@ pi_hostname = pi_hostname[:-1]
 make_label(pi_hostname + " - " +  get_ip(), 32, 30, 48, blue)
 # Second Row buttons 3 and 4
 #in pixels from left, from top, height, width
-make_button("     Desktop", 20, 105, 35, 90, blue)
-make_button("    Terminal", 130, 105, 35, 90, blue)
+make_button("     Desktop", 30, 105, 35, 120, blue)
+make_button("    Terminal", 170, 105, 35, 120, blue)
 # Third Row buttons 5 and 6
 make_button(" Empty Button", 30, 180, 35, 210, blue)
 make_button(" WiFi Settings", 260, 180, 35, 210, blue)
