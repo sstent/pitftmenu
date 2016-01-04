@@ -5,7 +5,7 @@ import subprocess
 import os
 import RPi.GPIO
 from pprint import pprint
-from pandas import *
+#from pandas import *
 
 
 from subprocess import *
@@ -35,10 +35,11 @@ def on_touch():
     # get the position that was touched
     touch_pos = (pygame.mouse.get_pos() [0], pygame.mouse.get_pos() [1])
     #  x_min                 x_max   y_min                y_max
-    if screen_click_map[touch_pos[0]][touch_pos[1]] = 0:
+    map_val = screen_click_map[touch_pos[0]][touch_pos[1]]
+    if map_val = 0:
         print "Not a button!!"
     else:
-         button(screen_click_map[touch_pos[0]][touch_pos[1]])
+         button(map_val)
 
 
     # # button 1 event
@@ -186,7 +187,8 @@ screen_height = 240
 screen_border_width = 10
 vertical_spacing = 30
 horizontal_spacing = 20
-headersize = 60
+headerfont = 24
+headersize = headerfont + vertical_spacing
 button_rows = 3
 button_columns = 2
 button_height = 35
@@ -210,7 +212,7 @@ pi_hostname = pi_hostname[:-1]
 # Buttons and labels
 # First Row Label
 #make_label(text, xpo, ypo, fontsize, colour):
-make_label(pi_hostname + " - " +  get_ip(), vertical_spacing, horizontal_spacing, 24, blue)
+make_label(pi_hostname + " - " +  get_ip(), vertical_spacing, horizontal_spacing, headerfont, blue)
 # Second Row buttons 3 and 4
 button_iter = 0
 
@@ -231,7 +233,7 @@ for row in xrange(0,button_rows):
         button_iter += 1
 
 
-print DataFrame(screen_click_map)
+#print DataFrame(screen_click_map)
 
 # #in pixels from left, from top, height, width
 # make_button("Desktop", 40, 105, 35, 120, blue)
