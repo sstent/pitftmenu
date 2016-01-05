@@ -105,7 +105,7 @@ def run_cmd(cmd):
     output = process.communicate()[0]
     return output
 
-def wificonfig():
+def wifiConfig():
         # Wifi Settings
         screen.fill(black)
         font=pygame.font.Font(None,42)
