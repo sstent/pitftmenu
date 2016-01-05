@@ -12,6 +12,7 @@ from subprocess import *
 os.environ["SDL_FBDEV"] = "/dev/fb1"
 os.environ["SDL_MOUSEDEV"] = "/dev/input/touchscreen"
 os.environ["SDL_MOUSEDRV"] = "TSLIB"
+thismodule = sys.modules[__name__]
 
 # Initialize pygame and hide mouse
 pygame.init()
@@ -44,7 +45,9 @@ def on_touch():
         #button(map_val)
         pprint (map_val[0])
         pprint (map_val[1])
-        pprint (button_config[map_val[0]][map_val[1]]["Function"])
+        map_func = button_config[map_val[0]][map_val[1]]["Function"]
+        button_func = getattr(thismodule, map_func)
+        button_func()
 
     # # button 1 event
     # if 30 <= touch_pos[0] <= 240 and 105 <= touch_pos[1] <=160:
