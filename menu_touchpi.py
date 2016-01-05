@@ -105,10 +105,10 @@ def run_cmd(cmd):
 def button(number):
     print "You pressed button ",number
 
-    if number == 1:
+    if number == 0:
         # desktop
         screen.fill(black)
-        font=pygame.font.Font(None,72)
+        font=pygame.font.Font(None,42)
         label=font.render("Launching Desktop", 1, (white))
         screen.blit(label,(10,120))
         pygame.display.flip()
@@ -117,20 +117,20 @@ def button(number):
         #run_cmd("FRAMEBUFFER=/dev/fb1 startx")
         sys.exit()
 
-    if number == 2:
+    if number == 1:
         # exit
         screen.fill(black)
-        font=pygame.font.Font(None,72)
+        font=pygame.font.Font(None,42)
         label=font.render("Exiting to Terminal", 1, (white))
         screen.blit(label,(10,120))
         pygame.display.flip()
         pygame.quit()
         sys.exit()
 
-    if number == 3:
+    if number == 2:
         # Pretend Shutdown
         screen.fill(black)
-        font=pygame.font.Font(None,48)
+        font=pygame.font.Font(None,42)
         label=font.render("Battery Low, Shutting down", 1, (white))
         screen.blit(label,(20,120))
         pygame.display.flip()
@@ -138,10 +138,10 @@ def button(number):
         pygame.quit()
         sys.exit()
 
-    if number == 4:
+    if number == 3:
         # Wifi Settings
         screen.fill(black)
-        font=pygame.font.Font(None,72)
+        font=pygame.font.Font(None,42)
         label=font.render("WiFi Settings. .", 1, (white))
         screen.blit(label,(20,120))
         pygame.display.flip()
@@ -149,7 +149,7 @@ def button(number):
         os.system("sudo python /home/pi/pifi.py/pifi.py --gui")
         sys.exit()
 
-    if number == 5:
+    if number == 4:
         # reboot
         screen.fill(black)
         font=pygame.font.Font(None,72)
@@ -160,7 +160,7 @@ def button(number):
         restart()
         sys.exit()
 
-    if number == 6:
+    if number == 5:
         # shutdown
         screen.fill(black)
         font=pygame.font.Font(None,72)
