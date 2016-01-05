@@ -41,9 +41,10 @@ def on_touch():
     if map_val == None:
         print "Not a button!!"
     else:
-        button(map_val)
-    
-    pprint (map_val)
+        #button(map_val)
+        pprint (map_val[0])
+        pprint (map_val[1])
+        pprint (button_config[map_val[0]][map_val[1]]["Function"])
 
     # # button 1 event
     # if 30 <= touch_pos[0] <= 240 and 105 <= touch_pos[1] <=160:
@@ -258,7 +259,7 @@ for row in xrange(0,button_rows):
         make_button(button_config[menu_level][button_iter]["Label"], from_left, from_top, button_height, button_width, blue)
         for map_row in xrange(from_top, from_top + button_height):
             for map_column in xrange(from_left, from_left + button_width):
-                screen_click_map[map_row][map_column] = button_iter
+                screen_click_map[map_row][map_column] = menu_level, button_iter
         print "Click Map"
         print (screen_click_map[from_top][from_left])
         #pass
