@@ -42,6 +42,7 @@ def on_touch():
     # else:
     #     pprint (map_val)
         #button(map_val)
+    pprint(touch_pos)
     pprint (map_val)
 
     # # button 1 event
