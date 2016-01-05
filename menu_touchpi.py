@@ -202,7 +202,7 @@ button_labels = ["Desktop","Terminal","Empty","WiFi Settings","blank","blank"]
 
 #set size of the screen
 size = screen_width, screen_height
-screen = pygame.display.set_mode(size)
+screen = pygame.display.set_mode(size, 0, 32)
 
 # Background Color
 screen.fill(black)
