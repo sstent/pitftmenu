@@ -32,6 +32,7 @@ def make_label(text, xpo, ypo, fontsize, colour):
 
 # define function that checks for touch location
 def on_touch():
+    global screen_click_map
     # get the position that was touched
     touch_pos = (pygame.mouse.get_pos() [0], pygame.mouse.get_pos() [1])
     #  x_min                 x_max   y_min                y_max
