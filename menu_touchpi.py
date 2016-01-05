@@ -36,13 +36,13 @@ def on_touch():
     # get the position that was touched
     touch_pos = (pygame.mouse.get_pos() [0], pygame.mouse.get_pos() [1])
     #  x_min                 x_max   y_min                y_max
+    pprint(pygame.mouse.get_pos())
     map_val = screen_click_map[touch_pos[0]][touch_pos[1]]
     # if map_val == None:
     #     print "Not a button!!"
     # else:
     #     pprint (map_val)
         #button(map_val)
-    pprint(pygame.mouse.get_pos())
     pprint (map_val)
 
     # # button 1 event
