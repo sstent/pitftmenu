@@ -226,7 +226,7 @@ button_config = [
                                 "Function": "None"
                             },{
                                 "Label":"WiFi Settings",
-                                "Function": "WifiConfig"
+                                "Function": "wifiConfig"
                             },{
                                 "Label":"blank",
                                 "Function": "None"
