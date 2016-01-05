@@ -36,7 +36,7 @@ def on_touch():
     touch_pos = (pygame.mouse.get_pos() [0], pygame.mouse.get_pos() [1])
     #  x_min                 x_max   y_min                y_max
     map_val = screen_click_map[touch_pos[0]][touch_pos[1]]
-    if map_val == 0:
+    if map_val == "None":
         print "Not a button!!"
     else:
         pprint (map_val)
@@ -194,7 +194,8 @@ button_rows = 3
 button_columns = 2
 button_height = 35
 button_width = 140
-screen_click_map = [[0] * screen_width] * screen_height
+# screen_click_map = [[0] * screen_width] * screen_height
+screen_click_map = [[None]* screen_width for _ in range(screen_height)]
 button_labels = ["Desktop","Terminal","Empty","WiFi Settings","blank","blank"]
 
 #set size of the screen
@@ -218,12 +219,12 @@ make_label(pi_hostname + " - " +  get_ip(), vertical_spacing, horizontal_spacing
 button_iter = 0
 
 
-pd.set_option('display.height', 1000)
-pd.set_option('display.max_rows', 500)
-pd.set_option('display.max_columns', 500)
-pd.set_option('display.width', 1000)
+# pd.set_option('display.height', 1000)
+# pd.set_option('display.max_rows', 500)
+# pd.set_option('display.max_columns', 500)
+# pd.set_option('display.width', 1000)
 
-print pd.DataFrame(screen_click_map)
+#print pd.DataFrame(screen_click_map)
 
 for row in xrange(0,button_rows):
     for column in xrange(0,button_columns):
@@ -240,7 +241,7 @@ for row in xrange(0,button_rows):
         button_iter += 1
 
 
-print pd.DataFrame(screen_click_map)
+#print pd.DataFrame(screen_click_map)
 
 # #in pixels from left, from top, height, width
 # make_button("Desktop", 40, 105, 35, 120, blue)
