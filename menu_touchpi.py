@@ -199,6 +199,24 @@ button_width = 140
 # screen_click_map = [[0] * screen_width] * screen_height
 screen_click_map = [[None]* screen_width for _ in range(screen_height)]
 button_labels = ["Desktop","Terminal","Empty","WiFi Settings","blank","blank"]
+button_config = [
+                            [{
+                                "Label":"Desktop",
+                                "Function": "LauchDesktop"
+                            },{
+                                "Label":"Terminal",
+                                "Function": "LauchTerminal"
+                            },{
+                                "Label":"Empty"
+                            },{
+                                "Label":"WiFi Settings"
+                            },{
+                                "Label":"blank"
+                            },{
+                                "Label":"Blank"
+                            }
+                        ]
+                ]
 
 #set size of the screen
 size = screen_width, screen_height
@@ -218,6 +236,8 @@ pi_hostname = pi_hostname[:-1]
 #make_label(text, xpo, ypo, fontsize, colour):
 make_label(pi_hostname + " - " +  get_ip(), vertical_spacing, horizontal_spacing, headerfont, blue)
 # Second Row buttons 3 and 4
+
+menu_level = 0
 button_iter = 0
 
 
@@ -231,11 +251,11 @@ button_iter = 0
 for row in xrange(0,button_rows):
     for column in xrange(0,button_columns):
         #print ('row: {} column: {}').format(row, column)
-        pprint (button_labels[button_iter])
+        pprint (button_config[menu_level][button_iter])
         from_left = horizontal_spacing + (horizontal_spacing * column) + (button_width * column)
         from_top =  headersize + (vertical_spacing * row) + (button_height * row)
         print ('row: {} column: {} from_left: {} from_top: {} maprows {}-{} mapcols {}-{} ').format(row, column, from_left, from_top, from_top, (from_top + button_height), from_left, (from_left + button_width))
-        make_button(button_labels[button_iter], from_left, from_top, button_height, button_width, blue)
+        make_button(button_config[menu_level][button_iter], from_left, from_top, button_height, button_width, blue)
         for map_row in xrange(from_top, from_top + button_height):
             for map_column in xrange(from_left, from_left + button_width):
                 screen_click_map[map_row][map_column] = button_iter
