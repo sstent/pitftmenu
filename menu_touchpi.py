@@ -105,6 +105,17 @@ def run_cmd(cmd):
     output = process.communicate()[0]
     return output
 
+def wificonfig():
+        # Wifi Settings
+        screen.fill(black)
+        font=pygame.font.Font(None,42)
+        label=font.render("WiFi Settings. .", 1, (white))
+        screen.blit(label,(20,120))
+        pygame.display.flip()
+        pygame.quit()
+        os.system("sudo python /home/pi/pifi.py/pifi.py --gui")
+        sys.exit()
+
 # Define each button press action
 def button(number):
     print "You pressed button ",number
