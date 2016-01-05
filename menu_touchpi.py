@@ -208,13 +208,17 @@ button_config = [
                                 "Label":"Terminal",
                                 "Function": "LauchTerminal"
                             },{
-                                "Label":"Empty"
+                                "Label":"Empty",
+                                "Function": "None"
                             },{
-                                "Label":"WiFi Settings"
+                                "Label":"WiFi Settings",
+                                "Function": "WifiConfig"
                             },{
-                                "Label":"blank"
+                                "Label":"blank",
+                                "Function": "None"
                             },{
-                                "Label":"Blank"
+                                "Label":"Blank",
+                                "Function": "None"
                             }
                         ]
                 ]
