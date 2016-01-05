@@ -116,11 +116,7 @@ def wifiConfig():
         os.system("sudo python /home/pi/pifi.py/pifi.py --gui")
         sys.exit()
 
-# Define each button press action
-def button(number):
-    print "You pressed button ",number
-
-    if number == 0:
+def LaunchDesktop():
         # desktop
         screen.fill(black)
         font=pygame.font.Font(None,42)
@@ -132,7 +128,7 @@ def button(number):
         #run_cmd("FRAMEBUFFER=/dev/fb1 startx")
         sys.exit()
 
-    if number == 1:
+def LaunchTerminal():
         # exit
         screen.fill(black)
         font=pygame.font.Font(None,42)
@@ -142,29 +138,18 @@ def button(number):
         pygame.quit()
         sys.exit()
 
-    if number == 2:
+def PretendShutdown():
         # Pretend Shutdown
         screen.fill(black)
         font=pygame.font.Font(None,42)
         label=font.render("Battery Low, Shutting down", 1, (white))
         screen.blit(label,(20,120))
         pygame.display.flip()
-        time.sleep(120)
+        time.sleep(10)
         pygame.quit()
         sys.exit()
 
-    if number == 3:
-        # Wifi Settings
-        screen.fill(black)
-        font=pygame.font.Font(None,42)
-        label=font.render("WiFi Settings. .", 1, (white))
-        screen.blit(label,(20,120))
-        pygame.display.flip()
-        pygame.quit()
-        os.system("sudo python /home/pi/pifi.py/pifi.py --gui")
-        sys.exit()
-
-    if number == 4:
+def RealReboot():
         # reboot
         screen.fill(black)
         font=pygame.font.Font(None,72)
@@ -175,7 +160,7 @@ def button(number):
         restart()
         sys.exit()
 
-    if number == 5:
+def RealShutdown():
         # shutdown
         screen.fill(black)
         font=pygame.font.Font(None,72)
@@ -238,8 +223,9 @@ button_config = [
                 ]
 
 #set size of the screen
-size = screen_width, screen_height
-screen = pygame.display.set_mode(size, 0, 32)
+#size = screen_width, screen_height
+#screen = pygame.display.set_mode(size, 0, 32)
+screen = pygame.display.set_mode((screen_width, screen_height), 0, 32)
 
 # Background Color
 screen.fill(black)
